@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: eureka-provider
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka
+    register-with-eureka: true
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30

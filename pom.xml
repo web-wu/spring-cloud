@@ -11,6 +11,9 @@
         <module>spring_cloud_goods</module>
         <module>spring_cloud_order</module>
         <module>eureka_server</module>
+        <module>eureka_server1</module>
+        <module>eureka_prover</module>
+        <module>eureka_consumer</module>
     </modules>
     <packaging>pom</packaging>
 
