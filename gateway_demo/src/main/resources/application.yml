@@ -1,0 +1,25 @@
+server:
+  port: 8850
+
+spring:
+  application:
+    name: gateway-demo
+  cloud:
+    gateway:
+      default-filters:
+        - AddResponseHeader=default-header-ssss, it-ok
+      routes:
+        - id: random-id
+#          uri: http://localhost:8848
+          uri: lb://provider-demo
+          predicates:
+            - path=/goods/**
+          filters:
+            - prfixPath=/wu
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka
+    register-with-eureka: false
+    fetch-registry: true

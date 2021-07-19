@@ -1,0 +1,13 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: eureka-server-demo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8765/eureka
+    register-with-eureka: false
+    fetch-registry: false
