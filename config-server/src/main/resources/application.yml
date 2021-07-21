@@ -1,0 +1,30 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/tabwu/springcloud-config-test.git
+  rabbitmq:
+    host: www.tabwu.com
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

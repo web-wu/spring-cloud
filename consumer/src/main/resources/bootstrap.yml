@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      name: goods
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+  rabbitmq:
+    host: www.tabwu.com
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: admin
